@@ -1,0 +1,26 @@
+{
+  "name": "professionalreadmegenerator",
+  "version": "1.0.0",
+  "description": "Learning to create readme file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crainey44/professionalReadmeGenerator.git"
+  },
+  "keywords": [
+    "Readme",
+    "generator"
+  ],
+  "author": "Charles Rainey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crainey44/professionalReadmeGenerator/issues"
+  },
+  "homepage": "https://github.com/Crainey44/professionalReadmeGenerator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
