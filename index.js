@@ -24,18 +24,23 @@ inquirer
     },
     {
         type: 'input',
-        name: 'purpose',
-        message: 'What is the purpose of this app?',
+        name: 'label',
+        message: 'What is the name of this project?',
       },
     {
         type: 'input',
         name: 'purpose',
-        message: 'What is the purpose of this app?',
+        message: 'What is the purpose of this project?',
       },  
   ])
   .then((data) => {
-    
+    console.log (data)
     
     fs.writeFile("README.md", generateMarkdown(data)
     );
+    
+  })
+  .catch(error => { // (**)
+    alert(`The unknown error has occurred: ${error}`);
+    // don’t return anything => execution goes the normal way
   });
