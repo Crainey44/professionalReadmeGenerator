@@ -3,6 +3,9 @@ const inquirer = require('inquirer');
 const path = require('path');
 const generateMarkdown = require("./generateMarkdown");
 
+// fs.open("README.md", fd => {
+//     fs.write(fd, "garbage")
+    
 inquirer
   .prompt([
     {
@@ -12,7 +15,7 @@ inquirer
     },
     {
       type: 'checkbox',
-      message: 'What is your favorite language?',
+      message: 'What is your preferred language?',
       name: 'stack',
       choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
     },
@@ -35,12 +38,12 @@ inquirer
   ])
   .then((data) => {
     console.log (data)
-    
-    fs.writeFile("README.md", generateMarkdown(data)
-    );
-    
+    const x = generateMarkdown(data)
+    console.log(x)
+    fs.writeFileSync("README.md", x)
   })
   .catch(error => { // (**)
-    alert(`The unknown error has occurred: ${error}`);
+    console.error(error)
+    // alert(`The unknown error has occurred: ${error}`);
     // don’t return anything => execution goes the normal way
   });
